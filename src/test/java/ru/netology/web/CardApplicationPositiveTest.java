@@ -40,7 +40,7 @@ public class CardApplicationPositiveTest {
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.className("button")).click();
         String actual = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText().trim();
-        assertEquals("  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actual);
+        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actual);
 
     }
 
@@ -61,7 +61,7 @@ public class CardApplicationPositiveTest {
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.className("button")).click();
         String actual = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText().trim();
-        assertEquals("  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actual);
+        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actual);
 
     }
 
