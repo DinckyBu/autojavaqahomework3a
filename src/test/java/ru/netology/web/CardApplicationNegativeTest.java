@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CardApplicationNegativeTest {
     private WebDriver driver;
@@ -80,5 +81,13 @@ public class CardApplicationNegativeTest {
 
     }
 
+    @Test
+    public void shouldNotValidateCheckbox() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Иванов Иван");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+7123456789000");
+        driver.findElement(By.className("button")).click();
+        assertTrue(driver.findElement(By.cssSelector("[data-test-id='agreement']")).isDisplayed());
+
+    }
 }
 
